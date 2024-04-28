@@ -49,7 +49,9 @@ struct SidebarView<TabContent: Sequence, SidebarExtraContent: View>: View where 
 
             sidebarExtraContent()
         }
+        #if os(iOS)
         .listStyle(.sidebar)
+        #endif
         .navigationTitle(appName)
     }
 }
